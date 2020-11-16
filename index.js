@@ -12,12 +12,12 @@ const menu = require("./lib/menu.js");
 const donate = require("./lib/donate.js");
 const info = require("./lib/info.js");
 //
-const BotName = 'A187 ID'; // Nama Bot Whatsapp
-const instagramlu = 'https://instagram.com/_sadboy.ig'; // Nama Instagramlu cok
-const whatsapplu = 'wa.me/+6285712632324'; // Nomor whatsapplu cok
+const BotName = 'RUKA BOT'; // Nama Bot Whatsapp
+const instagramlu = 'https://instagram.com/sndrzqy_'; // Nama Instagramlu cok
+const whatsapplu = 'wa.me/+6283159449440'; // Nomor whatsapplu cok
 const kapanbotaktif = 'Tergantung Jaringan'; // Kapan bot lu aktif
-const grupch1 = 'https://chat.whatsapp.com/GU6NsgZvfgw37vrjIxUPhP'; // OFFICIAL GRUP LU 1
-const grupch2 = 'https://www.youtube.com/channel/UCGYLWtyT9IADYNUiK0uZiGg'; // OFFICIAL GRUP LU 2
+const grupch1 = 'https://chat.whatsapp.com/JKhKJDkEDpg4srefqACH1y'; // OFFICIAL GRUP LU 1
+const grupch2 = 'https://www.youtube.com/channel/unknown+people'; // OFFICIAL GRUP LU 2
 //
 const
 {
@@ -63,11 +63,11 @@ fs.existsSync('./session.json') && conn.loadAuthInfo('./session.json')
 //conn.connectOptions.agent = ProxyAgent ('http://1.0.180.120:8080')
 conn.connect();
 
-conn.on('user-presence-update', json => console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @_sadboy.ig`))
+conn.on('user-presence-update', json => console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @sndrzqy_`))
 conn.on('message-status-update', json =>
 {
    const participant = json.participant ? ' (' + json.participant + ')' : '' // participant exists when the message is from a group
-   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @_sadboy.ig`)
+   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @sndrzqy_`)
 })
 
 conn.on('message-new', async(m) =>
@@ -119,7 +119,7 @@ conn.sendMessage(id, teks, MessageType.text)
 if (text.includes("!nulis")){
   const teks = text.replace(/!nulis /, "")
 axios.get(`https://mhankbarbar.herokuapp.com/nulis?text=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then((res) => {
-    let hasil = `Download sendiri ya hasilnya dibawah, soalnya kalo dikirim langsung hasilnya blur, Jangan Lupa Lupa Follow Instagram mimin yah https://instagram.com/_sadboy.ig\n\n${res.data.result}`;
+    let hasil = `Download sendiri ya hasilnya dibawah, soalnya kalo dikirim langsung hasilnya blur, Jangan Lupa Lupa Follow Instagram mimin yah https://instagram.com/sndrzqy_\n\n${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -127,7 +127,7 @@ axios.get(`https://mhankbarbar.herokuapp.com/nulis?text=${teks}&apiKey=zFuV88pxc
 if (text.includes("!ytmp3")){
 const teks = text.replace(/!ytmp3 /, "")
 axios.get(`https://mhankbarbar.herokuapp.com/api/yta?url=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then((res) => {
-    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..Jangan Lupa Follow Instagram mimin yah https://instagram.com/_sadboy.ig\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
+    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..Jangan Lupa Follow Instagram mimin yah https://instagram.com/sndrzqy_\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -135,7 +135,7 @@ axios.get(`https://mhankbarbar.herokuapp.com/api/yta?url=${teks}&apiKey=zFuV88px
 if (text.includes("!yt")){
 const teks = text.replace(/!yt /, "")
 axios.get(`https://mhankbarbar.herokuapp.com/api/ytv?url=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then((res) => {
-    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..Jangan Lupa Follow Instagram mimin yah https://instagram.com/_sadboy.ig\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
+    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..Jangan Lupa Follow Instagram mimin yah https://instagram.com/sndrzqy_\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -143,7 +143,7 @@ axios.get(`https://mhankbarbar.herokuapp.com/api/ytv?url=${teks}&apiKey=zFuV88px
 if (text.includes("!fb")){
 const teks = text.replace(/!fb /, "")
 axios.get(`https://mhankbarbar.herokuapp.com/api/epbe?url=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then((res) => {
-    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..Jangan Lupa Follow Instagram mimin yah https://instagram.com/_sadboy.ig\n\nJudul: ${res.data.title}\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
+    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..Jangan Lupa Follow Instagram mimin yah https://instagram.com/sndrzqy_\n\nJudul: ${res.data.title}\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -151,7 +151,7 @@ axios.get(`https://mhankbarbar.herokuapp.com/api/epbe?url=${teks}&apiKey=zFuV88p
 if (text.includes("!ig")){
 const teks = text.replace(/!ig /, "")
 axios.get(`https://mhankbarbar.herokuapp.com/api/ig?url=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then((res) => {
-    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..Jangan Lupa Follow Instagram mimin yah https://instagram.com/_sadboy.ig\n\nLink: ${res.data.result}`;
+    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..Jangan Lupa Follow Instagram mimin yah https://instagram.com/sndrzqy_\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -159,7 +159,7 @@ axios.get(`https://mhankbarbar.herokuapp.com/api/ig?url=${teks}&apiKey=zFuV88pxc
 if (text.includes("!twt")){
 const teks = text.replace(/!twt /, "")
 axios.get(`https://mhankbarbar.herokuapp.com/api/twit?url=${teks}&apiKey=zFuV88pxcIiCWuYlwg57`).then((res) => {
-    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..Jangan Lupa Follow Instagram mimin yah https://instagram.com/_sadboy.ig\n\nJudul: ${res.data.title}\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
+    let hasil = `Download sendiri melalui link dibawah ya, takut servernya down xixi..Jangan Lupa Follow Instagram mimin yah https://instagram.com/sndrzqy_\n\nJudul: ${res.data.title}\n\nSize: ${res.data.filesize}\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -248,7 +248,7 @@ conn.sendMessage(id, 'Ya?, ada yang bisa saya bantu? kalo bingung ketik !help ya
 else if (text == 'Woy'){
 conn.sendMessage(id, 'Ya?, ada yang bisa saya bantu? kalo bingung ketik !help ya kak..' ,MessageType.text);
 }
-else if (text == 'Hi'){
+else if (text == 'Ruka'){
 conn.sendMessage(id, 'Ya?, ada yang bisa saya bantu? kalo bingung ketik !help ya kak..' ,MessageType.text);
 }
 else if (text == 'Gan'){
